@@ -20,7 +20,7 @@ size_t hash(char *val, int capacity) {
 
 }
 
-char *kv_get(kv_t *db, const char *key) {
+char *kv_get(kv_t *db, char *key) {
     if (!db || !key) return NULL;
 
     size_t idx = hash(key, db->capacity);
